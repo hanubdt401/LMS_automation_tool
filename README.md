@@ -19,15 +19,25 @@ The **SRM LMS Automation Tool** is designed to streamline and enhance the user e
 - **Reduces Errors**: Minimizes the chances of missing deadlines or incorrect 
 
 
-## Installation
+## Installation -requirements
 - Install Dependencies
   ```shell
-    pkg install requests
-- Install Dependencies
+    pip install requests
+## Code Example
+- Update the username, password, and subject selection logic in the **main.py** file.
+  ```shell
+  LMS = srm_lms_dashboard.LMS("US1234", "passWORD")
+  LMS.Activity(LMS.PYTHON_PROGRAMING).CompleteAllWeeks()
+- Run this file in the Python shell.
     ```shell
     python main.py
+## You will replace the Subject 
+-   ANDROIED_APPLICATION_DEVELOPMENT
+-   CAREER_ADVANCEMENT 
+-   DATA_ANALYSING_USING_R 
+-   OPTIMIZATION_TECHNIQUES 
+-   CUMPUTER_NETWORKS 
+-   PYTHON_PROGRAMING 
 
-## Code Example
-```shell
-LMS = srm_lms_dashboard.LMS("US1234", "passWORD")
-LMS.Activity(LMS.PYTHON_PROGRAMING).CompleteAllWeeks()
+## Final Output 
+![ ](image.png)

@@ -46,7 +46,7 @@ class LMS():
                 if ((week["properties"]["title"] if "title" in week["properties"] else None) not in skiped_list) and self.isCompleted(week):
 
                   for assesments in week["entities"] if "entities" in week else None:
-                    print(f'  ->isCompleted: {SRM_Activities.LMS.POST(self.get_view_activity_url(assesments),None).status_code==200}') if self.get_view_activity_url(assesments) != None else None
+                    print(f'  ->isCompleted: {self.LMS.POST(self.get_view_activity_url(assesments),None).status_code==200}') if self.get_view_activity_url(assesments) != None else None
 
         def isCompleted(self,activity,title=True) ->bool:
           if "entities" not in activity: return False
